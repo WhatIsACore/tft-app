@@ -13,9 +13,7 @@ if(isDebug()){
   env = require('./env');
 } else {
   env = process.env;
+  env.isDebug = false;
 }
 
-module.exports = {
-  debug: isDebug(),
-  port: env.PORT || 5000
-};
+module.exports = env;

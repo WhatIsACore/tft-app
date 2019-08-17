@@ -11,7 +11,7 @@ const logger = winston.createLogger({
 });
 
 // if in debug, also output to console
-if(config.debug){
+if(config.isDebug){
   logger.add(new winston.transports.Console({
     format: winston.format.simple()
   }));
